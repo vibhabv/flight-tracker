@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✈️ Flight Price Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✈️ Flight Price Tracker</h1>
+            <p class="subtitle">Find the cheapest flights instantly</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-form">
+                <div class="form-group">
+                    <label for="from">From (Airport Code)</label>
+                    <input type="text" id="from" placeholder="e.g., JFK, LAX" value="JFK" maxlength="3">
+                </div>
+                
+                <div class="form-group">
+                    <label for="to">To (Airport Code)</label>
+                    <input type="text" id="to" placeholder="e.g., LAX, LHR" value="LAX" maxlength="3">
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Departure Date</label>
+                    <input type="date" id="date" value="2026-08-15">
+                </div>
+                
+                <button onclick="searchFlights()" class="btn-search">Search Flights</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Searching flights...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="results" class="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
