@@ -1,17 +1,26 @@
 # ✈️ Flight Price Tracker
 
-Real-time flight price search tool built with Node.js and Amadeus API.
+Real-time flight price search tool built with Node.js.
 
 **Live Demo:** [Coming soon after deployment]
 
 ## Features
 
 ✅ Search flights by airport code and date
-✅ Real prices from 500+ airlines worldwide
+✅ Realistic mock flight data
 ✅ Highlights cheapest option automatically
 ✅ Shows flight duration, stops, times
 ✅ Mobile responsive
 ✅ Clean, modern UI
+
+## Demo Routes (Try These!)
+
+```
+From → To
+JFK  → LAX  (New York to Los Angeles)
+LHR  → CDG  (London to Paris)
+NRT  → ICN  (Tokyo to Seoul)
+```
 
 ## Problem & Solution
 
@@ -25,9 +34,9 @@ Real-time flight price search tool built with Node.js and Amadeus API.
 ## Tech Stack
 
 - **Backend:** Node.js, Express.js
-- **API:** Amadeus Flight Search API
 - **Frontend:** Vanilla HTML/CSS/JavaScript
 - **Deployment:** Vercel
+- **Data:** Mock data (for demo/portfolio)
 
 ## How It Works
 
@@ -36,20 +45,16 @@ User enters: JFK → LAX on Aug 15
         ↓
 Express server receives request
         ↓
-Gets Amadeus API token
+Returns mock flight data (sorted by price)
         ↓
-Calls Amadeus Flight Search API
-        ↓
-Returns 20 cheapest flights
-        ↓
-Frontend displays sorted results
+Frontend displays results
 ```
 
 ## Local Development
 
 ### Prerequisites
 - Node.js installed
-- Amadeus API credentials (free at https://developers.amadeus.com)
+- That's it! No API keys needed.
 
 ### Setup
 
@@ -58,11 +63,6 @@ git clone https://github.com/yourname/flight-tracker.git
 cd flight-tracker
 
 npm install
-
-# Create .env file
-echo "AMADEUS_CLIENT_ID=your-id" > .env
-echo "AMADEUS_CLIENT_SECRET=your-secret" >> .env
-
 npm start
 ```
 
@@ -70,16 +70,18 @@ Visit: http://localhost:3000
 
 ## Testing
 
-Try:
-- JFK (New York) → LAX (Los Angeles)
-- LHR (London) → CDG (Paris)
-- NRT (Tokyo) → ICN (Seoul)
+Try these routes:
+- **JFK → LAX** (7 flights, $285-$455)
+- **LHR → CDG** (3 flights, $95-$120)
+- **NRT → ICN** (3 flights, $420-$480)
+
+Try other codes and you'll see: "No flights found" message
 
 ## Deployment
 
 1. Push code to GitHub
 2. Connect to Vercel
-3. Add environment variables
+3. No environment variables needed!
 4. Deploy ✅
 
 ## Market Opportunity
@@ -94,7 +96,29 @@ Try:
 This project taught me:
 1. **Constraints drive innovation** - Removing features > adding features
 2. **Focus > Features** - Serve one user well vs everyone poorly
-3. **Business model matters** - Affiliate revenue > ads for travel
+3. **Mock data is powerful** - Can showcase ideas without APIs
+4. **Business model matters** - Affiliate revenue > ads for travel
+
+## About the Mock Data
+
+This is a **portfolio demo project**. The flight data is:
+- ✅ Realistic (real airline codes, real prices)
+- ✅ Fully functional (all features work)
+- ✅ Demonstration purposes (not real bookings)
+
+To integrate real flight data, connect to:
+- Amadeus API
+- Skyscanner API
+- Google Flights API
+
+## Future Enhancements
+
+- [ ] Connect to real flight API
+- [ ] Add price tracking (save to database)
+- [ ] Add price alerts (email when drops)
+- [ ] Add user accounts
+- [ ] Add affiliate links
+- [ ] Build mobile app
 
 ## License
 
